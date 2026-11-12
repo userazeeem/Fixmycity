@@ -1,0 +1,169 @@
+.home {
+  width: 100%;
+  background: #ffffff;
+}
+
+.hero-section {
+  min-height: 650px;
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-tag,
+.section-tag {
+  color: #168b5c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-tag span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #168b5c;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.hero-content h1 {
+  margin: 25px 0;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  color: #172b24;
+}
+
+.hero-content h1 span,
+.home-about h2 span {
+  color: #168b5c;
+}
+
+.hero-content p {
+  max-width: 500px;
+  color: #68736d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.report-btn,
+.explore-btn {
+  padding: 15px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.report-btn {
+  background: #168b5c;
+  color: white;
+}
+
+.report-btn span {
+  margin-left: 12px;
+}
+
+.report-btn:hover {
+  background: #106c46;
+  transform: translateY(-3px);
+}
+
+.explore-btn {
+  border: 1px solid #dce5df;
+  color: #172b24;
+}
+
+.explore-btn:hover {
+  border-color: #168b5c;
+  color: #168b5c;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 55px;
+}
+
+.hero-stats h3 {
+  font-size: 25px;
+  margin: 0;
+  color: #168b5c;
+}
+
+.hero-stats span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #7c8781;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 470px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.home-about {
+  padding: 85px 20px;
+  text-align: center;
+  background: #f6faf7;
+}
+
+.home-about h2 {
+  margin: 20px 0;
+  color: #172b24;
+  font-size: 40px;
+}
+
+.home-about p {
+  max-width: 650px;
+  margin: auto;
+  color: #68736d;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 60px 7%;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero-image img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 40px 6%;
+  }
+
+  .hero-content h1 {
+    letter-spacing: -1px;
+  }
+
+  .hero-stats {
+    gap: 25px;
+  }
+
+  .home-about h2 {
+    font-size: 30px;
+  }
+}

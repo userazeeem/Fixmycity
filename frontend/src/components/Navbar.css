@@ -1,0 +1,175 @@
+
+.navbar {
+  width: 100%;
+  min-height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  color: #111111;
+  font-size: 27px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -1.2px;
+}
+
+.nav-logo span {
+  color: #555555;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px;
+  background: #f5f5f5;
+  border-radius: 50px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 17px;
+  color: #555555;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn,
+.get-started-btn,
+.logout-btn {
+  min-height: 43px;
+  padding: 0 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn {
+  color: #111111;
+  background: #f3f3f3;
+  border: none;
+}
+
+.login-btn:hover {
+  background: #e7e7e7;
+}
+
+.get-started-btn,
+.logout-btn {
+  color: #ffffff;
+  background: #111111;
+  border: 1px solid #111111;
+}
+
+.get-started-btn:hover,
+.logout-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #111111;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+  .navbar {
+    min-height: 72px;
+    padding: 0 5%;
+  }
+
+  .nav-logo {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    padding: 22px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 16px;
+    padding: 8px;
+  }
+
+  .nav-links a {
+    padding: 13px 16px;
+    border-radius: 12px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .login-btn,
+  .get-started-btn,
+  .logout-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+}
